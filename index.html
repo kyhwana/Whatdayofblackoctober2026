@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>What day of Black October 2026 is it?</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
+       
+    </head>
+    <style>
+            body {
+                font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; 
+                background-color: white;
+                color: black;
+            }
+            .about, .about a {
+                color: gray;
+                font-size: 12;
+            }
+            @media(prefers-color-scheme: dark) {
+                body {
+                    background-color: black;
+                    color: white;
+                }
+            }
+            .main-text {
+                font-size: 48;
+            }
+        </style>
+    <body>
+       
+        <table style="width: 100%;height: 100%;text-align: center;">
+            <tr style="height: 50%;">
+                <td class="main-text">Today is the <br><b> <span id="number"></span> of Black October 2026</b>.</td>
+                <tr style="height: 40%;"><td class="incideints">
+                <a href="https://www.theregister.com/offbeat/2026/11/13/faa-lifts-ground-stop-after-hours-long-delays-snag-travelers/5309912">FAA issues ground stop for all USA airspace</a><br>
+                <a href="https://www.theregister.com/saas/2026/11/13/microsofts-massive-m365-outage-stretches-past-27-hours-as-its-fixes-keep-failing/5309609">Microsoft 364</a><br>
+                <a href="https://en.wikipedia.org/wiki/PHP2Shell">PHP2Shell</a>
+                </td>
+            </tr>
+            <tr style="height: 10%;">
+                <td class="about">Inspired by <a href="https://whatdayofmarch2020.com/">What day of march 2020 is it?</a> </td>
+            </tr>
+        </table>
+    </body>
+    <script>
+        function ordinal(i) {
+            var j = i % 10
+            var k = i % 100
+            if (j == 1 && k != 11) {
+                return "st"
+            }
+            if (j == 2 && k != 12) {
+                return "nd"
+            }
+            if (j == 3 && k != 13) {
+                return "rd"
+            }
+            return "th"
+        }
+
+       
+        let today = moment()
+        let origin = moment("2026-10-01", "YYYY-MM-DD")
+        let diff = today.diff(origin, "days")
+        let todaysNumber = diff + 1
+        document.getElementById("number").innerHTML = todaysNumber + "<sup>" + ordinal(todaysNumber) + "</sup>"
+        
+    </script>
+</html>
